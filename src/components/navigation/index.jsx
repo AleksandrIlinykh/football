@@ -10,7 +10,7 @@ export default function Navigation() {
 
   const pagesNames = [
     { name: 'Главная', route: '/' },
-    { name: 'Записаться', route: '/enroll' },
+    { name: 'О школе', route: '/about-school' },
     { name: 'О тренере', route: '/about' },
     { name: 'Первая тренировка', route: '/first-lesson' },
   ];

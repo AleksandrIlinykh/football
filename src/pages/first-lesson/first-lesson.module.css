@@ -1,0 +1,13 @@
+.main {
+  background: url(/Speckles.png);
+  background-size: contain;
+}
+
+.skills {
+  display: flex;
+  gap: 30px;
+}
+
+.dda {
+  background-color: red;
+}

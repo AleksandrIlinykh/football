@@ -1,14 +1,16 @@
 import InfoCard from "@/components/info-card";
-import styles from "./index.module.css";
-import Navigation from "@/components/navigation";
+import styles from "./about-school.module.css";
 import PageContent from "@/components/page-content";
-import classNames from "classnames";
+
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("@/components/map"), { ssr: false });
 
 export default function AboutSchool() {
   return (
     <PageContent>
-      <h2>о нашей школе</h2>
-      <p>
+      <h2 className={styles.header}>о нашей школе</h2>
+      <p className={styles.locationInfo}>
         Мы находимся по адресу: <br /> г. Екатеринбург <br /> Куйбышева 32а к1,
         ДС “Снежинка”
       </p>
@@ -22,10 +24,15 @@ export default function AboutSchool() {
             text="3000 рублей (2 раза в неделю)"
           />
         </div>
-        <div className={styles.right}>
+        <div className={styles.left}>
           <h3>Расписание</h3>
+          <InfoCard heading="Суббота:" text="" />
+          <InfoCard heading="Воскресенье:" text="" />
         </div>
       </section>
+      <div className={styles.mapContainer}>
+        <Map />
+      </div>
       <button>Записаться</button>
     </PageContent>
   );
